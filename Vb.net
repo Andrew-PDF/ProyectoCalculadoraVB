@@ -26,4 +26,17 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim num1 As Double
+        Dim num2 As Double
+        Dim resultado As Double
+
+        If Double.TryParse(TextBox1.Text, num1) And Double.TryParse(TextBox2.Text, num2) Then
+            resultado = num1 * num2
+            Label3.Text = "La Multiplicación es: " & resultado.ToString()
+        Else
+            MessageBox.Show("Por favor, introduce números válidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
 End Class
